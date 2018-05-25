@@ -1,0 +1,20 @@
+【记录时间】：2018-05-24 20:58:12
+【日志级别】：ERROR
+【错误信息】：Base-64 字符数组或字符串的长度无效。
+   在 System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   在 System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   在 System.Convert.FromBase64String(String s)
+   在 SunGolden.Encryption.DEncrypt.Decrypt(String encrypted, String key, Encoding encoding) 位置 E:\Code\Sungolden\trunk\SunGolden\SunGolden.DEncrypt\DEncrypt.cs:行号 87
+   在 SunGolden.Encryption.DEncrypt.Decrypt(String original) 位置 E:\Code\Sungolden\trunk\SunGolden\SunGolden.DEncrypt\DEncrypt.cs:行号 49
+   在 AgriculturalLandUpdate.frmLogin.frmLogin_Load(Object sender, EventArgs e) 位置 C:\Users\sdzh09\Documents\Visual Studio 2010\Projects\AgriculturalLandUpdate\AgriculturalLandUpdate\frmLogin.cs:行号 34
+
+【记录时间】：2018-05-24 21:04:22
+【日志级别】：ERROR
+【错误信息】：Base-64 字符数组或字符串的长度无效。
+   在 System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   在 System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   在 System.Convert.FromBase64String(String s)
+   在 SunGolden.Encryption.DEncrypt.Decrypt(String encrypted, String key, Encoding encoding) 位置 E:\Code\Sungolden\trunk\SunGolden\SunGolden.DEncrypt\DEncrypt.cs:行号 87
+   在 SunGolden.Encryption.DEncrypt.Decrypt(String original) 位置 E:\Code\Sungolden\trunk\SunGolden\SunGolden.DEncrypt\DEncrypt.cs:行号 49
+   在 AgriculturalLandUpdate.frmLogin.frmLogin_Load(Object sender, EventArgs e) 位置 C:\Users\sdzh09\Documents\Visual Studio 2010\Projects\AgriculturalLandUpdate\AgriculturalLandUpdate\frmLogin.cs:行号 40
+

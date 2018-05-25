@@ -1,0 +1,410 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3BA5E45F-41B6-4576-B089-F1F5EE3BA69D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AgriculturalLandUpdate</RootNamespace>
+    <AssemblyName>AgriculturalLandUpdate</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo32.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ESRI.ArcGIS.3DAnalyst, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\lib\ESRI.ArcGIS.3DAnalyst.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.AxControls, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\ESRI.ArcGIS.AxControls.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Carto, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\lib\ESRI.ArcGIS.Carto.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Controls, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\lib\ESRI.ArcGIS.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Display, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\lib\ESRI.ArcGIS.Display.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geometry, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\lib\ESRI.ArcGIS.Geometry.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Output, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\lib\ESRI.ArcGIS.Output.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.System, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\lib\ESRI.ArcGIS.System.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.SystemUI, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\lib\ESRI.ArcGIS.SystemUI.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Version, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\ESRI.ArcGIS.Version.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin">
+      <HintPath>..\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="SunGolden.ArcGIS.License">
+      <HintPath>..\lib\SunGolden.ArcGIS.License.dll</HintPath>
+    </Reference>
+    <Reference Include="SunGolden.Encryption">
+      <HintPath>..\lib\SunGolden.Encryption.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\lib\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\UIIni.cs" />
+    <Compile Include="ConstDef.cs" />
+    <Compile Include="ConstMsg.cs" />
+    <Compile Include="Db\Authority.cs" />
+    <Compile Include="Db\Log.cs" />
+    <Compile Include="Db\LogMan.cs" />
+    <Compile Include="Db\Role.cs" />
+    <Compile Include="Db\Sqlite.cs" />
+    <Compile Include="Db\User.cs" />
+    <Compile Include="frm\frmEditUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\frmEditUser.Designer.cs">
+      <DependentUpon>frmEditUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm\frmAuthorityMan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\frmAuthorityMan.Designer.cs">
+      <DependentUpon>frmAuthorityMan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm\frmLogMan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\frmLogMan.Designer.cs">
+      <DependentUpon>frmLogMan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm\frmAddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\frmAddUser.Designer.cs">
+      <DependentUpon>frmAddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm\frmChPwd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\frmChPwd.Designer.cs">
+      <DependentUpon>frmChPwd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ProcessCheck.cs" />
+    <Compile Include="frm\frmUserMan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\frmUserMan.Designer.cs">
+      <DependentUpon>frmUserMan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ucPage\ucPanelPrepro.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucPage\ucPanelPrepro.Designer.cs">
+      <DependentUpon>ucPanelPrepro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucPage\ucPanelFile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucPage\ucPanelFile.Designer.cs">
+      <DependentUpon>ucPanelFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucPage\ucPanelUpdate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucPage\ucPanelUpdate.Designer.cs">
+      <DependentUpon>ucPanelUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucPage\ucPanelSys.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucPage\ucPanelSys.Designer.cs">
+      <DependentUpon>ucPanelSys.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frm\frmEditUser.resx">
+      <DependentUpon>frmEditUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\frmAuthorityMan.resx">
+      <DependentUpon>frmAuthorityMan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\frmLogMan.resx">
+      <DependentUpon>frmLogMan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\frmAddUser.resx">
+      <DependentUpon>frmAddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\frmChPwd.resx">
+      <DependentUpon>frmChPwd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\frmUserMan.resx">
+      <DependentUpon>frmUserMan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucPage\ucPanelPrepro.resx">
+      <DependentUpon>ucPanelPrepro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucPage\ucPanelFile.resx">
+      <DependentUpon>ucPanelFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucPage\ucPanelUpdate.resx">
+      <DependentUpon>ucPanelUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucPage\ucPanelSys.resx">
+      <DependentUpon>ucPanelSys.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\basemap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\boxSec.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\calcu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\clear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\doc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\eagle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\find.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\fixZomIn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\fixZomOut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\FullExtent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\identity.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\muliSelect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\nextView.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Pan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\pin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\poi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\preView.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\redo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\selectSample.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\shutter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\ZoomIn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\ZoomOut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\login.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\logo32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\train32.png" />
+    <None Include="img\classify32.png" />
+    <None Include="img\verify32.png" />
+    <None Include="img\CloudDet32.png" />
+    <None Include="img\CloudPatch32.png" />
+    <None Include="img\cut32.png" />
+    <None Include="img\userMan32.png" />
+    <None Include="img\auth32.png" />
+    <None Include="img\log32.png" />
+    <None Include="img\logout32.png" />
+    <None Include="img\add32.png" />
+    <None Include="img\clear32.png" />
+    <None Include="img\new32.png" />
+    <None Include="img\open32.png" />
+    <None Include="img\recode32.png" />
+    <None Include="img\stats32.png" />
+    <None Include="img\samplelayer32.png" />
+    <None Include="img\save32.png" />
+    <None Include="img\setting32.png" />
+    <None Include="img\update32.png" />
+    <None Include="img\chpwd32.png" />
+    <None Include="img\reset.png" />
+    <None Include="img\pixel.png" />
+    <None Include="img\attr.png" />
+    <None Include="img\trans.png" />
+    <None Include="img\render.png" />
+    <None Include="img\table.png" />
+    <None Include="img\remove.png" />
+    <None Include="img\zom2Lyr.png" />
+    <Content Include="logo32.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
